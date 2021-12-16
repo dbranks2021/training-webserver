@@ -69,8 +69,8 @@ Improvements
 --------------
 A domain needs to be registered and a route53 alias created that points to the ELB. 
 
-www.example.com A(alias) dawn-web-72908829.eu-west-1.elb.amazonaws.com
+i.e www.example.com A(alias) dawn-web-72908829.eu-west-1.elb.amazonaws.com
 
-Create an SSL cert and apply it to the ELB so that access to the website is secure
+Create an SSL cert and apply it to the ELB so that access to the website is secure.
 
 
