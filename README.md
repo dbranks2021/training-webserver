@@ -29,18 +29,30 @@ Create VPC
 -----------------
 
 $ cd training-webserver
+
 $ terraform init
+
 $ terraform plan -out plan.out
+
 $ terraform apply
 
 Create webserver
 -----------------
 $ cd web
+
 $ terraform init
+
 $ terraform plan -out plan.out
+
 $ terraform apply
 
+Accessing the website
+----------------------
+The website can be accessed using the ELB address
 
+i.e http://dawn-web-72908829.eu-west-1.elb.amazonaws.com/index.html
+
+---------------------------------------------------------------------------------------
 The Vpc is created with a cidr block of 10.0.0.0/16.
 
 There two subnets, a private and public subnet.
@@ -52,3 +64,13 @@ CloudWatch metric alarms. There are two one, that triggers the scale up policy w
 The elb is deployed in the public subnet. All incoming requests to the webserver will hit the loadbalancer first which
 is in the public subnet, the loadbalancer will then direct requests to the webserver instances located in  the private
 subnet.
+
+Improvements
+--------------
+A domain needs to be registered and a route53 alias created that points to the ELB. 
+
+i.e www.example.com A(alias) dawn-web-72908829.eu-west-1.elb.amazonaws.com
+
+Create an SSL cert and apply it to the ELB so that access to the website is secure.
+
+
