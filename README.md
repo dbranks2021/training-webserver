@@ -36,6 +36,13 @@ $ terraform plan -out plan.out
 
 $ terraform apply
 
+$ mv remote_state remote_state.tf
+
+$ terraform init
+
+Type yes to copy existing state to the new backend
+     ---
+
 Create webserver
 -----------------
 $ cd web
