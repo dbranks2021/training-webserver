@@ -29,6 +29,7 @@ Create VPC
 -----------------
 
 $ cd training-webserver
+
 $ terraform init
 $ terraform plan -out plan.out
 $ terraform apply
