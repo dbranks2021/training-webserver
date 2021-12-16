@@ -6,7 +6,7 @@ resource "aws_s3_bucket" "public" {
 
     Name = "public-web"
   }
-  acl = "public-read"
+  acl = "private"
 
 }
 
